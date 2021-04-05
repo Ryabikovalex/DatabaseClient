@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "server=gcfactory.space;port=3306;user=u0996168_App;password=i_b15BoJXig9;database=u0996168_MAI_DB_LB" MySql.Data.EntityFrameworkCore -OutputDir DbModels -f
