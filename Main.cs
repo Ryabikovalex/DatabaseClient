@@ -1,38 +1,40 @@
 ﻿using Hotel_SA.DbModels;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
 namespace Hotel_SA
 {
-    public partial class Main : Form
+    public partial class Main : ProjectForm
     {
         public Main()
         {
             InitializeComponent();
+
+            Living_Btn.Enabled = false;
+            PaidServices_Btn.Enabled = false;
+            Archive_Btn.Enabled = false;
+            checkOut_Btn.Enabled = false;
         }
 
-        private void btnAviableRooms_Click(object sender, EventArgs e)
+        private void availableRooms_Btn_Click(object sender, EventArgs e)
         {
-            Show_Available_Rooms subForm = new Show_Available_Rooms(this);
             this.disableElements();
+            Show_Available_Rooms subForm = new Show_Available_Rooms(this);
             subForm.Show();
         }
 
-        public void disableElements()
+        public override void disableElements()
         {
-            AvialableRooms_Btn.Enabled = false;
+            AvailableRooms_Btn.Enabled = false;
+            ReservedRooms_Btn.Enabled = false;
+
         }
-        public void enableElements()
+        public override void enableElements()
         {
-            AvialableRooms_Btn.Enabled = true;
+            AvailableRooms_Btn.Enabled = true;
+            ReservedRooms_Btn.Enabled = true;
+            AvailableRooms_Btn.Select();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -43,19 +45,56 @@ namespace Hotel_SA
                 {
                     if (db.Database.CanConnect())
                     {
-                        statusLabel.Text = "Online";
+                        statusLabel.Text = @"Online";
                         this.enableElements();
                     }
                     else
                     {
-                        statusLabel.Text = "ERROR: Can't connect to database";
+                        statusStrip.Text = @"ERROR: Can't connect to database";
                     }
                 }
             }catch(Exception error)
             {
-                statusLabel.Text = "ERROR: Can't connect to database";
+                statusStrip.Text = @"ERROR: Can't connect to database";
+                Console.WriteLine(error.Message);
             }
             
+        }
+
+        /// <summary>
+        /// Обработка события клик по кнопке выход
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Exit_Btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void reservedRooms_Btn_Click(object sender, EventArgs e)
+        {
+            this.disableElements();
+            Show_Reserved_Rooms subForm = new Show_Reserved_Rooms(this);
+            subForm.Show();
+        }
+
+        private void PaidServices_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkOut_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Archive_Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Living_Btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

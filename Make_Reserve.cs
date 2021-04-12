@@ -15,17 +15,16 @@ using System.Windows.Forms;
 
 namespace Hotel_SA
 {
-    public partial class Make_Reserve : Form
+    public partial class Make_Reserve : ProjectForm
     {
-        private Hotel_SA.Show_Available_Rooms ParentF;
         private List<DbModels.AvialableRooms> Rooms;
-         
+
         /// <summary>
         /// Конструктор формы Создания брони
         /// </summary>
-        /// <param name="parent"></param>
-        /// <param name="list"></param>
-        public Make_Reserve(Hotel_SA.Show_Available_Rooms parent, List<DbModels.AvialableRooms> list)
+        /// <param name="parent">Форма Поиска свободных номеров</param>
+        /// <param name="list">Список номеров выбранных для бронирования</param>
+        public Make_Reserve(ProjectForm parent, List<DbModels.AvialableRooms> list)
         {
             InitializeComponent();
 
@@ -141,6 +140,7 @@ namespace Hotel_SA
 
         private void Reserve_Btn_Click(object sender, EventArgs e)
         {
+            disableElements();
             Match m = Regex.Match(Number_textbox.Text, Resources.RegExTelePhone);
             string number = "", name = "";
             bool type = clientType_checkbox.Checked ? true : false;
@@ -154,13 +154,13 @@ namespace Hotel_SA
             // Если есть то сделать резервацию новую
             using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
             {
-                DbModels.Client client = db.Client.Where(p => p.Telephone == number).FirstOrDefault();
+                DbModels.Client client = db.Client.Where(p => p.Telephone == number || p.Fio == name).FirstOrDefault();
                 if (client != null)
                 {
-                    if ((client.Fio != name && MessageBox.Show("Найден клиент " + "\"" + client.Fio + "\" с таким же номером телефона\n"
-                            +"Yes - для замены клиента на " + "\"" + client.Fio + "\""
+                    if ((client.Fio != name && MessageBox.Show(@"Найден клиент " + "\"" + client.Fio + "\" с указанным телефоном\n"
+                            +@"Yes - чтобы продолжить как " + "\"" + client.Fio + "\""
                             ,
-                            "Ошибка ввода данных",
+                            @"Ошибка ввода данных",
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Warning,
                             MessageBoxDefaultButton.Button2,
@@ -178,7 +178,8 @@ namespace Hotel_SA
 
                     this.proceedReserve(client);
                 }
-            }  
+            }
+            enableElements();
         }
 
         private void proceedReserve(Client client)
@@ -191,12 +192,34 @@ namespace Hotel_SA
                     db.Reservation.Add(new Reservation { RoomId = obj.Id, ClientId = client.Id });
                 }
                 db.SaveChanges();
-                DialogResult result = MessageBox.Show("Бронирование произошло успешно", "Успех", MessageBoxButtons.OK);
+                DialogResult result = MessageBox.Show(@"Бронирование произошло успешно", @"Успех", MessageBoxButtons.OK);
                 if (result == DialogResult.OK)
                 {
                     this.Close();
                 }
             }
+        }
+
+        public override void enableElements()
+        {
+            Name_textbox.Enabled = true;
+            Number_textbox.Enabled = true;
+            clientType_checkbox.Enabled = true;
+            if (!clientType_checkbox.Checked)
+            {
+                sexMale_radio.Enabled = true;
+                sexFemale_radio.Enabled = true;
+            }
+            Reserve_Btn.Enabled = false;
+        }
+        public override void disableElements()
+        {
+            Name_textbox.Enabled = false;
+            Number_textbox.Enabled = false;
+            sexMale_radio.Enabled = false;
+            sexFemale_radio.Enabled = false;
+            clientType_checkbox.Enabled = false;
+            Reserve_Btn.Enabled = false;
         }
     }
 }

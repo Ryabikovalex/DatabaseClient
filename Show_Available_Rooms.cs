@@ -13,24 +13,24 @@ using System.Windows.Forms;
 namespace Hotel_SA
 {
 
-    public partial class Show_Available_Rooms : Form
+    public partial class Show_Available_Rooms : ProjectForm
     {
-        public struct RoomType_struct
+        struct RoomType_struct
         {
             public int Id { get; set; }
             public string Name { get; set; }
         }
         private List<RoomType_struct> types; // Список типов комнат
         private int selectedType; // Выбранный тип комнат
-        private Main MainForm; // Главная форма
+        
         /// <summary>
         /// Конструткор формы Список доступных номеров
         /// </summary>
         /// <param name="F">Форма главная</param>
-        public Show_Available_Rooms(Main F)
+        public Show_Available_Rooms(ProjectForm F)
         {
             InitializeComponent();
-            MainForm = F;
+            ParentF = F;
             using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
             {
                 // Выборка типов номера
@@ -111,7 +111,7 @@ namespace Hotel_SA
         /// <summary>
         /// Отключение элементов управления формы
         /// </summary>
-        public void disableElements()
+        public override void disableElements()
         {
             FreeRooms_List.Enabled = false;
             countPeople.Enabled = false;
@@ -125,7 +125,7 @@ namespace Hotel_SA
         /// <summary>
         /// Включение элементов управления формы
         /// </summary>
-        public void enableElements()
+        public override void enableElements()
         {
             FreeRooms_List.Enabled = true;
             countPeople.Enabled = true;
@@ -198,18 +198,6 @@ namespace Hotel_SA
                 CheckIn_Btn.Enabled = false;
                 Reserve_Btn.Enabled = false;
             }
-        }
-        /// <summary>
-        /// Обработка события закрытия комнаты
-        /// <!--Включаются элементы главной формы-->
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AvailableRooms_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            MainForm.enableElements();
-            MainForm.Show();
-            MainForm.Activate();
         }
         /// <summary>
         /// Обработка события клик по кнопке Очистить
