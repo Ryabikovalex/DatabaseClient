@@ -1,5 +1,4 @@
 ﻿using System;
-using Hotel_SA.Properties;
 using Microsoft.EntityFrameworkCore;
 using MySQL.Data.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -37,8 +36,8 @@ namespace Hotel_SA.DbModels
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySQL(Settings.Default.MySQL_conn);
-#warning Enables Logging SQL
+                optionsBuilder.UseMySQL(Properties.Settings.Default.MySQL_conn);
+#warning Enabled Logging SQL
                 optionsBuilder.EnableSensitiveDataLogging();
                 ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {; });
                 ConsoleLoggerExtensions.AddConsole(MyLoggerFactory);
@@ -51,10 +50,6 @@ namespace Hotel_SA.DbModels
             modelBuilder.Entity<Archive>(entity =>
             {
                 entity.HasComment("Архив записей");
-
-                entity.HasIndex(e => e.Passport)
-                    .HasName("Passport")
-                    .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnType("int(10) unsigned");
 
