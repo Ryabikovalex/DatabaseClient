@@ -26,6 +26,10 @@ namespace Hotel_SA
             public DateTime ExpiresAt { get; set; }
         }
 
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
+        /// <param name="parent"></param>
         public Show_Reserved_Rooms(ProjectForm parent)
         {
             InitializeComponent();
@@ -34,7 +38,9 @@ namespace Hotel_SA
 
             getReservationList();
         }
-
+        /// <summary>
+        /// Выборка списка всех бронирований и группировка по клиентам
+        /// </summary>
         private void getReservationList()
         {
             disableElements();
@@ -51,6 +57,7 @@ namespace Hotel_SA
                     roomId = p.RoomId,
                     roomNumber = p.Room.RoomNumber,
                     ExpiresAt = p.ExpiresAt
+                    // Сортируем по имени клиента
                 }).OrderBy(u => u.clientName).ToList();
                 string temp = roomList[0].clientName;
                 ListViewGroup group;
@@ -104,12 +111,20 @@ namespace Hotel_SA
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Обработка события клик по кнопке Заселение
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CheckIn_Btn_Click(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// Обработка события клик по кнопке Удаление брони
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReserveDelete_Btn_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show(@"Потвердите действие",
@@ -128,20 +143,38 @@ namespace Hotel_SA
                         ids.Add(((ReservedRooms_struct)(item.Tag)).Id);
 
                     }
-                    db.Reservation.RemoveRange
-(db.Reservation.Where(r => ids.Contains(r.Id)));
+                    db.Reservation.RemoveRange(db.Reservation.Where(r => ids.Contains(r.Id)));
                     db.SaveChanges();
                 }
                 getReservationList();
 
             }
         }
-
+        /// <summary>
+        /// Обработка события клик по кнопке Продление брони
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReserveUpdate_Btn_Click(object sender, EventArgs e)
         {
+            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            {
+                List<int> ids = new List<int>();
+                foreach (ListViewItem item in ReserveRooms_List.SelectedItems)
+                {
+                    ids.Add(((ReservedRooms_struct)(item.Tag)).Id);
+
+                }
+                db.Reservation.Where(r => ids.Contains(r.Id)).ToList().ForEach(p => p.ExpiresAt = p.ExpiresAt.AddDays(1));
+                db.SaveChanges();
+            }
             getReservationList();
         }
-
+        /// <summary>
+        /// Обработка события клик по кнопке Очистить
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Clear_Btn_Click(object sender, EventArgs e)
         {
             ReserveRooms_List.SelectedItems.Clear();
