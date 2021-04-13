@@ -12,7 +12,6 @@ namespace Hotel_SA
             InitializeComponent();
 
             Living_Btn.Enabled = false;
-            PaidServices_Btn.Enabled = false;
             Archive_Btn.Enabled = false;
             checkOut_Btn.Enabled = false;
         }
@@ -28,12 +27,14 @@ namespace Hotel_SA
         {
             AvailableRooms_Btn.Enabled = false;
             ReservedRooms_Btn.Enabled = false;
+            PaidServices_Btn.Enabled = false;
 
         }
         public override void enableElements()
         {
             AvailableRooms_Btn.Enabled = true;
             ReservedRooms_Btn.Enabled = true;
+            PaidServices_Btn.Enabled = true;
             AvailableRooms_Btn.Select();
         }
 
@@ -79,7 +80,9 @@ namespace Hotel_SA
 
         private void PaidServices_Btn_Click(object sender, EventArgs e)
         {
-
+            this.disableElements();
+            Charge_Service subForm = new Charge_Service(this);
+            subForm.Show();
         }
 
         private void checkOut_Btn_Click(object sender, EventArgs e)
