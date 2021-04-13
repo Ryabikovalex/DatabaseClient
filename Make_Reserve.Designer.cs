@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ReserveRooms_List = new System.Windows.Forms.ListView();
-            this.colRoomNumber = new System.Windows.Forms.ColumnHeader();
-            this.colRoomCapacity = new System.Windows.Forms.ColumnHeader();
-            this.colCheckIn = new System.Windows.Forms.ColumnHeader();
-            this.colRoomCost = new System.Windows.Forms.ColumnHeader();
+            this.colRoomNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRoomCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCheckIn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRoomCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name_Label = new System.Windows.Forms.Label();
             this.Name_textbox = new System.Windows.Forms.TextBox();
             this.Number_textbox = new System.Windows.Forms.TextBox();
@@ -50,7 +50,11 @@
             // ReserveRooms_List
             // 
             this.ReserveRooms_List.AutoArrange = false;
-            this.ReserveRooms_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.colRoomNumber, this.colRoomCapacity, this.colCheckIn, this.colRoomCost});
+            this.ReserveRooms_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colRoomNumber,
+            this.colRoomCapacity,
+            this.colCheckIn,
+            this.colRoomCost});
             this.ReserveRooms_List.FullRowSelect = true;
             this.ReserveRooms_List.GridLines = true;
             this.ReserveRooms_List.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -162,7 +166,7 @@
             // 
             // Exit_Btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Exit_Btn.Location = new System.Drawing.Point(612, 196);
             this.Exit_Btn.Name = "Exit_Btn";
             this.Exit_Btn.Size = new System.Drawing.Size(176, 38);
@@ -173,7 +177,7 @@
             // 
             // Clear_btn
             // 
-            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Clear_btn.Location = new System.Drawing.Point(612, 152);
             this.Clear_btn.Name = "Clear_btn";
             this.Clear_btn.Size = new System.Drawing.Size(176, 38);
@@ -184,7 +188,7 @@
             // 
             // Reserve_Btn
             // 
-            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Reserve_Btn.Location = new System.Drawing.Point(612, 15);
             this.Reserve_Btn.Name = "Reserve_Btn";
             this.Reserve_Btn.Size = new System.Drawing.Size(176, 38);
@@ -215,6 +219,7 @@
             this.sexPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

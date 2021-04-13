@@ -40,16 +40,16 @@ namespace Hotel_SA
             this.CheckIn_Label = new System.Windows.Forms.Label();
             this.CheckOut_Label = new System.Windows.Forms.Label();
             this.FreeRooms_List = new System.Windows.Forms.ListView();
-            this.colRoomNumber = new System.Windows.Forms.ColumnHeader();
-            this.colRoomCapacity = new System.Windows.Forms.ColumnHeader();
-            this.colCheckIn = new System.Windows.Forms.ColumnHeader();
-            this.colRoomCost = new System.Windows.Forms.ColumnHeader();
+            this.colRoomNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRoomCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCheckIn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colRoomCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Search_Btn = new System.Windows.Forms.Button();
             this.Reserve_Btn = new System.Windows.Forms.Button();
             this.CheckIn_Btn = new System.Windows.Forms.Button();
             this.Exit_Btn = new System.Windows.Forms.Button();
             this.Clear_btn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize) (this.countPeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countPeople)).BeginInit();
             this.SuspendLayout();
             // 
             // RoomTypes_Dropdown
@@ -65,12 +65,24 @@ namespace Hotel_SA
             // countPeople
             // 
             this.countPeople.Location = new System.Drawing.Point(153, 54);
-            this.countPeople.Maximum = new decimal(new int[] {30, 0, 0, 0});
-            this.countPeople.Minimum = new decimal(new int[] {1, 0, 0, 0});
+            this.countPeople.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.countPeople.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.countPeople.Name = "countPeople";
             this.countPeople.Size = new System.Drawing.Size(171, 22);
             this.countPeople.TabIndex = 2;
-            this.countPeople.Value = new decimal(new int[] {1, 0, 0, 0});
+            this.countPeople.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.countPeople.ValueChanged += new System.EventHandler(this.checkCapacity);
             // 
             // RoomType_Label
@@ -131,7 +143,11 @@ namespace Hotel_SA
             // 
             // FreeRooms_List
             // 
-            this.FreeRooms_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.colRoomNumber, this.colRoomCapacity, this.colCheckIn, this.colRoomCost});
+            this.FreeRooms_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colRoomNumber,
+            this.colRoomCapacity,
+            this.colCheckIn,
+            this.colRoomCost});
             this.FreeRooms_List.FullRowSelect = true;
             this.FreeRooms_List.GridLines = true;
             this.FreeRooms_List.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -169,7 +185,7 @@ namespace Hotel_SA
             // 
             // Search_Btn
             // 
-            this.Search_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Search_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Search_Btn.Location = new System.Drawing.Point(612, 38);
             this.Search_Btn.Name = "Search_Btn";
             this.Search_Btn.Size = new System.Drawing.Size(176, 38);
@@ -180,7 +196,7 @@ namespace Hotel_SA
             // 
             // Reserve_Btn
             // 
-            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Reserve_Btn.Location = new System.Drawing.Point(612, 112);
             this.Reserve_Btn.Name = "Reserve_Btn";
             this.Reserve_Btn.Size = new System.Drawing.Size(176, 38);
@@ -191,7 +207,7 @@ namespace Hotel_SA
             // 
             // CheckIn_Btn
             // 
-            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckIn_Btn.Location = new System.Drawing.Point(612, 156);
             this.CheckIn_Btn.Name = "CheckIn_Btn";
             this.CheckIn_Btn.Size = new System.Drawing.Size(176, 38);
@@ -202,7 +218,7 @@ namespace Hotel_SA
             // 
             // Exit_Btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Exit_Btn.Location = new System.Drawing.Point(612, 400);
             this.Exit_Btn.Name = "Exit_Btn";
             this.Exit_Btn.Size = new System.Drawing.Size(176, 38);
@@ -213,7 +229,7 @@ namespace Hotel_SA
             // 
             // Clear_btn
             // 
-            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Clear_btn.Location = new System.Drawing.Point(612, 200);
             this.Clear_btn.Name = "Clear_btn";
             this.Clear_btn.Size = new System.Drawing.Size(176, 38);
@@ -244,9 +260,10 @@ namespace Hotel_SA
             this.Name = "Show_Available_Rooms";
             this.Text = "Поиск  свободных номеров";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_FormClosing);
-            ((System.ComponentModel.ISupportInitialize) (this.countPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countPeople)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

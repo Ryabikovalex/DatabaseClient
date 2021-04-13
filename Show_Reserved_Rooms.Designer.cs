@@ -83,7 +83,7 @@ namespace Hotel_SA
             // 
             // Exit_Btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Exit_Btn.Location = new System.Drawing.Point(492, 312);
             this.Exit_Btn.Name = "Exit_Btn";
             this.Exit_Btn.Size = new System.Drawing.Size(211, 38);
@@ -95,7 +95,7 @@ namespace Hotel_SA
             // CheckIn_Btn
             // 
             this.CheckIn_Btn.Enabled = false;
-            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CheckIn_Btn.Location = new System.Drawing.Point(492, 12);
             this.CheckIn_Btn.Name = "CheckIn_Btn";
             this.CheckIn_Btn.Size = new System.Drawing.Size(211, 38);
@@ -107,7 +107,7 @@ namespace Hotel_SA
             // ReserveUpdate_Btn
             // 
             this.ReserveUpdate_Btn.Enabled = false;
-            this.ReserveUpdate_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveUpdate_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ReserveUpdate_Btn.Location = new System.Drawing.Point(492, 100);
             this.ReserveUpdate_Btn.Name = "ReserveUpdate_Btn";
             this.ReserveUpdate_Btn.Size = new System.Drawing.Size(211, 38);
@@ -119,7 +119,7 @@ namespace Hotel_SA
             // ReserveDelete_Btn
             // 
             this.ReserveDelete_Btn.Enabled = false;
-            this.ReserveDelete_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveDelete_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ReserveDelete_Btn.Location = new System.Drawing.Point(492, 56);
             this.ReserveDelete_Btn.Name = "ReserveDelete_Btn";
             this.ReserveDelete_Btn.Size = new System.Drawing.Size(211, 38);
@@ -130,7 +130,7 @@ namespace Hotel_SA
             // 
             // Clear_Btn
             // 
-            this.Clear_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clear_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Clear_Btn.Location = new System.Drawing.Point(492, 268);
             this.Clear_Btn.Name = "Clear_Btn";
             this.Clear_Btn.Size = new System.Drawing.Size(211, 38);
