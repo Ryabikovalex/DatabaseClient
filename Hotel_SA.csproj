@@ -366,6 +366,12 @@
     <Compile Include="Make_Reserve.Designer.cs">
       <DependentUpon>Make_Reserve.cs</DependentUpon>
     </Compile>
+    <Compile Include="Show_Living.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Living.Designer.cs">
+      <DependentUpon>Show_Living.cs</DependentUpon>
+    </Compile>
     <Compile Include="Show_Reserved_Rooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Make_Reserve.resx">
       <DependentUpon>Make_Reserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Living.resx">
+      <DependentUpon>Show_Living.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Show_Reserved_Rooms.resx">
       <DependentUpon>Show_Reserved_Rooms.cs</DependentUpon>

@@ -31,14 +31,14 @@
             this.RoomNumber_lbl = new System.Windows.Forms.Label();
             this.PaidServices_list = new System.Windows.Forms.ListBox();
             this.Service_list = new System.Windows.Forms.ListBox();
-            this.Add_Btn = new System.Windows.Forms.Button();
+            this.Add_btn = new System.Windows.Forms.Button();
             this.Count_lbl = new System.Windows.Forms.Label();
             this.Count_numeric = new System.Windows.Forms.NumericUpDown();
             this.PaidServices_lbl = new System.Windows.Forms.Label();
             this.Service_lbl = new System.Windows.Forms.Label();
             this.Clear_btn = new System.Windows.Forms.Button();
-            this.Charge_Btn = new System.Windows.Forms.Button();
-            this.Remove_Btn = new System.Windows.Forms.Button();
+            this.Charge_btn = new System.Windows.Forms.Button();
+            this.Remove_btn = new System.Windows.Forms.Button();
             this.RoomNumber_combobox = new System.Windows.Forms.ComboBox();
             this.Sum_lbl = new System.Windows.Forms.Label();
             this.SumValue_lbl = new System.Windows.Forms.Label();
@@ -77,17 +77,17 @@
             this.Service_list.Size = new System.Drawing.Size(266, 244);
             this.Service_list.TabIndex = 3;
             // 
-            // Add_Btn
+            // Add_btn
             // 
-            this.Add_Btn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Add_Btn.BackgroundImage = global::Hotel_SA.Properties.Resources.arrow_right;
-            this.Add_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add_Btn.Location = new System.Drawing.Point(289, 188);
-            this.Add_Btn.Name = "Add_Btn";
-            this.Add_Btn.Size = new System.Drawing.Size(80, 42);
-            this.Add_Btn.TabIndex = 4;
-            this.Add_Btn.UseVisualStyleBackColor = false;
-            this.Add_Btn.Click += new System.EventHandler(this.Add_Btn_Click);
+            this.Add_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Add_btn.BackgroundImage = global::Hotel_SA.Properties.Resources.arrow_right;
+            this.Add_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add_btn.Location = new System.Drawing.Point(289, 188);
+            this.Add_btn.Name = "Add_btn";
+            this.Add_btn.Size = new System.Drawing.Size(80, 42);
+            this.Add_btn.TabIndex = 4;
+            this.Add_btn.UseVisualStyleBackColor = false;
+            this.Add_btn.Click += new System.EventHandler(this.Add_btn_Click);
             // 
             // Count_lbl
             // 
@@ -153,29 +153,29 @@
             this.Clear_btn.UseVisualStyleBackColor = true;
             this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
             // 
-            // Charge_Btn
+            // Charge_btn
             // 
-            this.Charge_Btn.Enabled = false;
-            this.Charge_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Charge_Btn.Location = new System.Drawing.Point(375, 10);
-            this.Charge_Btn.Name = "Charge_Btn";
-            this.Charge_Btn.Size = new System.Drawing.Size(266, 60);
-            this.Charge_Btn.TabIndex = 16;
-            this.Charge_Btn.Text = "Записать на комнату";
-            this.Charge_Btn.UseVisualStyleBackColor = true;
-            this.Charge_Btn.Click += new System.EventHandler(this.Charge_Btn_Click);
+            this.Charge_btn.Enabled = false;
+            this.Charge_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Charge_btn.Location = new System.Drawing.Point(375, 10);
+            this.Charge_btn.Name = "Charge_btn";
+            this.Charge_btn.Size = new System.Drawing.Size(266, 60);
+            this.Charge_btn.TabIndex = 16;
+            this.Charge_btn.Text = "Записать на комнату";
+            this.Charge_btn.UseVisualStyleBackColor = true;
+            this.Charge_btn.Click += new System.EventHandler(this.Charge_btn_Click);
             // 
-            // Remove_Btn
+            // Remove_btn
             // 
-            this.Remove_Btn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Remove_Btn.BackgroundImage = global::Hotel_SA.Properties.Resources.arrow_left;
-            this.Remove_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Remove_Btn.Location = new System.Drawing.Point(289, 236);
-            this.Remove_Btn.Name = "Remove_Btn";
-            this.Remove_Btn.Size = new System.Drawing.Size(80, 42);
-            this.Remove_Btn.TabIndex = 17;
-            this.Remove_Btn.UseVisualStyleBackColor = false;
-            this.Remove_Btn.Click += new System.EventHandler(this.Remove_Btn_Click);
+            this.Remove_btn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Remove_btn.BackgroundImage = global::Hotel_SA.Properties.Resources.arrow_left;
+            this.Remove_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Remove_btn.Location = new System.Drawing.Point(289, 236);
+            this.Remove_btn.Name = "Remove_btn";
+            this.Remove_btn.Size = new System.Drawing.Size(80, 42);
+            this.Remove_btn.TabIndex = 17;
+            this.Remove_btn.UseVisualStyleBackColor = false;
+            this.Remove_btn.Click += new System.EventHandler(this.Remove_btn_Click);
             // 
             // RoomNumber_combobox
             // 
@@ -216,14 +216,14 @@
             this.Controls.Add(this.SumValue_lbl);
             this.Controls.Add(this.Sum_lbl);
             this.Controls.Add(this.RoomNumber_combobox);
-            this.Controls.Add(this.Remove_Btn);
-            this.Controls.Add(this.Charge_Btn);
+            this.Controls.Add(this.Remove_btn);
+            this.Controls.Add(this.Charge_btn);
             this.Controls.Add(this.Clear_btn);
             this.Controls.Add(this.Service_lbl);
             this.Controls.Add(this.PaidServices_lbl);
             this.Controls.Add(this.Count_numeric);
             this.Controls.Add(this.Count_lbl);
-            this.Controls.Add(this.Add_Btn);
+            this.Controls.Add(this.Add_btn);
             this.Controls.Add(this.Service_list);
             this.Controls.Add(this.PaidServices_list);
             this.Controls.Add(this.RoomNumber_lbl);
@@ -241,14 +241,14 @@
         private System.Windows.Forms.Label RoomNumber_lbl;
         private System.Windows.Forms.ListBox PaidServices_list;
         private System.Windows.Forms.ListBox Service_list;
-        private System.Windows.Forms.Button Add_Btn;
+        private System.Windows.Forms.Button Add_btn;
         private System.Windows.Forms.Label Count_lbl;
         private System.Windows.Forms.NumericUpDown Count_numeric;
         private System.Windows.Forms.Label PaidServices_lbl;
         private System.Windows.Forms.Label Service_lbl;
         private System.Windows.Forms.Button Clear_btn;
-        private System.Windows.Forms.Button Charge_Btn;
-        private System.Windows.Forms.Button Remove_Btn;
+        private System.Windows.Forms.Button Charge_btn;
+        private System.Windows.Forms.Button Remove_btn;
         private System.Windows.Forms.ComboBox RoomNumber_combobox;
         private System.Windows.Forms.Label Sum_lbl;
         private System.Windows.Forms.Label SumValue_lbl;

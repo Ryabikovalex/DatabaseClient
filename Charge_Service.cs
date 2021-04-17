@@ -71,7 +71,7 @@ namespace Hotel_SA
             Service_list.ValueMember = "Id";
         }
 
-        private void Add_Btn_Click(object sender, EventArgs e)
+        private void Add_btn_Click(object sender, EventArgs e)
         {
             if(PaidServices_list.SelectedItems.Count > 0)
             {
@@ -82,11 +82,11 @@ namespace Hotel_SA
                 SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) + S.Count * S.Cost).ToString();
 
                 Count_numeric.Value = 1;
-                Charge_Btn.Enabled = true;
+                Charge_btn.Enabled = true;
             }
         }
 
-        private void Remove_Btn_Click(object sender, EventArgs e)
+        private void Remove_btn_Click(object sender, EventArgs e)
         {
             if (Service_list.SelectedItems.Count > 0)
             {
@@ -94,7 +94,7 @@ namespace Hotel_SA
 
                 Service_list.Items.RemoveAt(Service_list.SelectedIndex);
                 SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) - S.Count * S.Cost).ToString();
-                if (Service_list.Items.Count == 0) Charge_Btn.Enabled = false;
+                if (Service_list.Items.Count == 0) Charge_btn.Enabled = false;
             }
         }
 
@@ -102,15 +102,15 @@ namespace Hotel_SA
         {
             Service_list.Items.Clear();
 
-            Charge_Btn.Enabled = false;
+            Charge_btn.Enabled = false;
 
             Count_numeric.Value = 1;
             SumValue_lbl.Text = "0";
         }
 
-        private void Charge_Btn_Click(object sender, EventArgs e)
+        private void Charge_btn_Click(object sender, EventArgs e)
         {
-            Charge_Btn.Enabled = false;
+            Charge_btn.Enabled = false;
             using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
             {
                 List<ServiceList> list = new List<ServiceList>();
@@ -131,7 +131,6 @@ namespace Hotel_SA
                 this.Activate();
                 this.Clear_btn_Click(sender, e);
             }
-            Charge_Btn.Enabled = true;
         }
     }
 }
