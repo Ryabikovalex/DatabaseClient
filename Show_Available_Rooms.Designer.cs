@@ -44,10 +44,10 @@ namespace Hotel_SA
             this.colRoomCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCheckIn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colRoomCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Search_Btn = new System.Windows.Forms.Button();
-            this.Reserve_Btn = new System.Windows.Forms.Button();
-            this.CheckIn_Btn = new System.Windows.Forms.Button();
-            this.Exit_Btn = new System.Windows.Forms.Button();
+            this.Search_btn = new System.Windows.Forms.Button();
+            this.Reserve_btn = new System.Windows.Forms.Button();
+            this.CheckIn_btn = new System.Windows.Forms.Button();
+            this.Exit_btn = new System.Windows.Forms.Button();
             this.Clear_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.countPeople)).BeginInit();
             this.SuspendLayout();
@@ -183,49 +183,49 @@ namespace Hotel_SA
             this.colRoomCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.colRoomCost.Width = 273;
             // 
-            // Search_Btn
+            // Search_btn
             // 
-            this.Search_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Search_Btn.Location = new System.Drawing.Point(612, 38);
-            this.Search_Btn.Name = "Search_Btn";
-            this.Search_Btn.Size = new System.Drawing.Size(176, 38);
-            this.Search_Btn.TabIndex = 10;
-            this.Search_Btn.Text = "Поиск";
-            this.Search_Btn.UseVisualStyleBackColor = true;
-            this.Search_Btn.Click += new System.EventHandler(this.loadRooms);
+            this.Search_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_btn.Location = new System.Drawing.Point(612, 38);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(176, 38);
+            this.Search_btn.TabIndex = 10;
+            this.Search_btn.Text = "Поиск";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.loadRooms);
             // 
-            // Reserve_Btn
+            // Reserve_btn
             // 
-            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Reserve_Btn.Location = new System.Drawing.Point(612, 112);
-            this.Reserve_Btn.Name = "Reserve_Btn";
-            this.Reserve_Btn.Size = new System.Drawing.Size(176, 38);
-            this.Reserve_Btn.TabIndex = 11;
-            this.Reserve_Btn.Text = "Бронь";
-            this.Reserve_Btn.UseVisualStyleBackColor = true;
-            this.Reserve_Btn.Click += new System.EventHandler(this.Reserve_Btn_Click);
+            this.Reserve_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Reserve_btn.Location = new System.Drawing.Point(612, 112);
+            this.Reserve_btn.Name = "Reserve_btn";
+            this.Reserve_btn.Size = new System.Drawing.Size(176, 38);
+            this.Reserve_btn.TabIndex = 11;
+            this.Reserve_btn.Text = "Бронь";
+            this.Reserve_btn.UseVisualStyleBackColor = true;
+            this.Reserve_btn.Click += new System.EventHandler(this.Reserve_btn_Click);
             // 
-            // CheckIn_Btn
+            // CheckIn_btn
             // 
-            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckIn_Btn.Location = new System.Drawing.Point(612, 156);
-            this.CheckIn_Btn.Name = "CheckIn_Btn";
-            this.CheckIn_Btn.Size = new System.Drawing.Size(176, 38);
-            this.CheckIn_Btn.TabIndex = 12;
-            this.CheckIn_Btn.Text = "Заселение";
-            this.CheckIn_Btn.UseVisualStyleBackColor = true;
-            this.CheckIn_Btn.Click += new System.EventHandler(this.CheckIn_Btn_Click);
+            this.CheckIn_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckIn_btn.Location = new System.Drawing.Point(612, 156);
+            this.CheckIn_btn.Name = "CheckIn_btn";
+            this.CheckIn_btn.Size = new System.Drawing.Size(176, 38);
+            this.CheckIn_btn.TabIndex = 12;
+            this.CheckIn_btn.Text = "Заселение";
+            this.CheckIn_btn.UseVisualStyleBackColor = true;
+            this.CheckIn_btn.Click += new System.EventHandler(this.CheckIn_btn_Click);
             // 
-            // Exit_Btn
+            // Exit_btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit_Btn.Location = new System.Drawing.Point(612, 400);
-            this.Exit_Btn.Name = "Exit_Btn";
-            this.Exit_Btn.Size = new System.Drawing.Size(176, 38);
-            this.Exit_Btn.TabIndex = 13;
-            this.Exit_Btn.Text = "Выход";
-            this.Exit_Btn.UseVisualStyleBackColor = true;
-            this.Exit_Btn.Click += new System.EventHandler(this.Exit_Btn_Click);
+            this.Exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_btn.Location = new System.Drawing.Point(612, 400);
+            this.Exit_btn.Name = "Exit_btn";
+            this.Exit_btn.Size = new System.Drawing.Size(176, 38);
+            this.Exit_btn.TabIndex = 13;
+            this.Exit_btn.Text = "Выход";
+            this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // Clear_btn
             // 
@@ -244,10 +244,10 @@ namespace Hotel_SA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Clear_btn);
-            this.Controls.Add(this.Exit_Btn);
-            this.Controls.Add(this.CheckIn_Btn);
-            this.Controls.Add(this.Reserve_Btn);
-            this.Controls.Add(this.Search_Btn);
+            this.Controls.Add(this.Exit_btn);
+            this.Controls.Add(this.CheckIn_btn);
+            this.Controls.Add(this.Reserve_btn);
+            this.Controls.Add(this.Search_btn);
             this.Controls.Add(this.FreeRooms_List);
             this.Controls.Add(this.CheckOut_Label);
             this.Controls.Add(this.CheckIn_Label);
@@ -281,10 +281,10 @@ namespace Hotel_SA
         private System.Windows.Forms.ColumnHeader colRoomCapacity;
         private System.Windows.Forms.ColumnHeader colRoomCost;
         private System.Windows.Forms.ColumnHeader colCheckIn;
-        private System.Windows.Forms.Button Search_Btn;
-        private System.Windows.Forms.Button Reserve_Btn;
-        private System.Windows.Forms.Button CheckIn_Btn;
-        private System.Windows.Forms.Button Exit_Btn;
+        private System.Windows.Forms.Button Search_btn;
+        private System.Windows.Forms.Button Reserve_btn;
+        private System.Windows.Forms.Button CheckIn_btn;
+        private System.Windows.Forms.Button Exit_btn;
         private System.Windows.Forms.Button Clear_btn;
     }
 }

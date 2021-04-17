@@ -86,20 +86,20 @@ namespace Hotel_SA
 
             // Выравнивание столбцов по шапке
             ReserveRooms_List.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-            Clear_Btn.Select();
+            Clear_btn.Select();
         }
 
         public override void disableElements()
         {
-            ReserveDelete_Btn.Enabled = false;
-            ReserveUpdate_Btn.Enabled = false;
-            CheckIn_Btn.Enabled = false;
+            ReserveDelete_btn.Enabled = false;
+            ReserveUpdate_btn.Enabled = false;
+            CheckIn_btn.Enabled = false;
         }
         public override void enableElements()
         {
-            ReserveDelete_Btn.Enabled = true;
-            ReserveUpdate_Btn.Enabled = true;
-            CheckIn_Btn.Enabled = true;
+            ReserveDelete_btn.Enabled = true;
+            ReserveUpdate_btn.Enabled = true;
+            CheckIn_btn.Enabled = true;
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Exit_Btn_Click(object sender, EventArgs e)
+        private void Exit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -116,7 +116,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CheckIn_Btn_Click(object sender, EventArgs e)
+        private void CheckIn_btn_Click(object sender, EventArgs e)
         {
 
         }
@@ -125,7 +125,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ReserveDelete_Btn_Click(object sender, EventArgs e)
+        private void ReserveDelete_btn_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show(@"Потвердите действие",
                             "Вы потверждаете удаление " + ReserveRooms_List.SelectedItems.Count + " записей?",
@@ -155,7 +155,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ReserveUpdate_Btn_Click(object sender, EventArgs e)
+        private void ReserveUpdate_btn_Click(object sender, EventArgs e)
         {
             using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
             {
@@ -175,7 +175,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Clear_Btn_Click(object sender, EventArgs e)
+        private void Clear_btn_Click(object sender, EventArgs e)
         {
             ReserveRooms_List.SelectedItems.Clear();
             disableElements();

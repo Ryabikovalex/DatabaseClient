@@ -56,8 +56,8 @@ namespace Hotel_SA
                 dateTimeCheckOut.MaxDate = DateTime.Today.AddMonths(18);
 
                 // Отключение кнопок по умолчанию
-                Reserve_Btn.Enabled = false;
-                CheckIn_Btn.Enabled = false;
+                Reserve_btn.Enabled = false;
+                CheckIn_btn.Enabled = false;
             }
 
         }
@@ -79,6 +79,7 @@ namespace Hotel_SA
         private void loadRooms (object sender, EventArgs e)
         {
             this.disableElements();
+            Cursor.Current = Cursors.WaitCursor;
             FreeRooms_List.Items.Clear();
 
             // Подключение к БД
@@ -106,6 +107,7 @@ namespace Hotel_SA
             FreeRooms_List.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             this.enableElements();
+            Cursor.Current = Cursors.Default;
         }
 
         /// <summary>
@@ -118,9 +120,9 @@ namespace Hotel_SA
             dateTimeCheckIn.Enabled = false;
             dateTimeCheckOut.Enabled = false;
             RoomTypes_Dropdown.Enabled = false;
-            Search_Btn.Enabled = false;
-            /*CheckIn_Btn.Enabled = false;
-            Reserve_Btn.Enabled = false;*/
+            Search_btn.Enabled = false;
+            /*CheckIn_btn.Enabled = false;
+            Reserve_btn.Enabled = false;*/
         }
         /// <summary>
         /// Включение элементов управления формы
@@ -132,9 +134,9 @@ namespace Hotel_SA
             dateTimeCheckIn.Enabled = true;
             dateTimeCheckOut.Enabled = true;
             RoomTypes_Dropdown.Enabled = true;
-            Search_Btn.Enabled = true;
-            /*CheckIn_Btn.Enabled = true;
-            Reserve_Btn.Enabled = true;*/
+            Search_btn.Enabled = true;
+            /*CheckIn_btn.Enabled = true;
+            Reserve_btn.Enabled = true;*/
         }
 
         /// <summary>
@@ -142,7 +144,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Reserve_Btn_Click(object sender, EventArgs e)
+        private void Reserve_btn_Click(object sender, EventArgs e)
         {
             // Получение списка выбранных номеро
             var list = FreeRooms_List.SelectedItems;
@@ -158,7 +160,7 @@ namespace Hotel_SA
             this.disableElements();
         }
 
-        private void CheckIn_Btn_Click(object sender, EventArgs e)
+        private void CheckIn_btn_Click(object sender, EventArgs e)
         {
 
         }
@@ -167,7 +169,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Exit_Btn_Click(object sender, EventArgs e)
+        private void Exit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -190,13 +192,13 @@ namespace Hotel_SA
             // Если вместимость достаточная то идет разблокировка кнопок
             if (totalC >= countPeople.Value)
             {
-                CheckIn_Btn.Enabled = true;
-                Reserve_Btn.Enabled = true;
+                CheckIn_btn.Enabled = true;
+                Reserve_btn.Enabled = true;
             }
             else
             {
-                CheckIn_Btn.Enabled = false;
-                Reserve_Btn.Enabled = false;
+                CheckIn_btn.Enabled = false;
+                Reserve_btn.Enabled = false;
             }
         }
         /// <summary>

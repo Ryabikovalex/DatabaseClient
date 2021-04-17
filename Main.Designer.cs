@@ -31,8 +31,8 @@ namespace Hotel_SA
         /// </summary>
         private void InitializeComponent()
         {
-            this.AvailableRooms_Btn = new System.Windows.Forms.Button();
-            this.ReservedRooms_Btn = new System.Windows.Forms.Button();
+            this.AvailableRooms_btn = new System.Windows.Forms.Button();
+            this.ReservedRooms_btn = new System.Windows.Forms.Button();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -41,39 +41,38 @@ namespace Hotel_SA
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.Living_Btn = new System.Windows.Forms.Button();
-            this.Exit_Btn = new System.Windows.Forms.Button();
-            this.PaidServices_Btn = new System.Windows.Forms.Button();
-            this.Archive_Btn = new System.Windows.Forms.Button();
-            this.checkOut_Btn = new System.Windows.Forms.Button();
+            this.Living_btn = new System.Windows.Forms.Button();
+            this.Exit_btn = new System.Windows.Forms.Button();
+            this.PaidServices_btn = new System.Windows.Forms.Button();
+            this.Archive_btn = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AvailableRooms_Btn
+            // AvailableRooms_btn
             // 
-            this.AvailableRooms_Btn.Enabled = false;
-            this.AvailableRooms_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AvailableRooms_Btn.Location = new System.Drawing.Point(283, 150);
-            this.AvailableRooms_Btn.Name = "AvailableRooms_Btn";
-            this.AvailableRooms_Btn.Size = new System.Drawing.Size(278, 47);
-            this.AvailableRooms_Btn.TabIndex = 1;
-            this.AvailableRooms_Btn.Text = "Доступные номера";
-            this.AvailableRooms_Btn.UseVisualStyleBackColor = true;
-            this.AvailableRooms_Btn.Click += new System.EventHandler(this.availableRooms_Btn_Click);
+            this.AvailableRooms_btn.Enabled = false;
+            this.AvailableRooms_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AvailableRooms_btn.Location = new System.Drawing.Point(283, 150);
+            this.AvailableRooms_btn.Name = "AvailableRooms_btn";
+            this.AvailableRooms_btn.Size = new System.Drawing.Size(278, 47);
+            this.AvailableRooms_btn.TabIndex = 1;
+            this.AvailableRooms_btn.Text = "Доступные номера";
+            this.AvailableRooms_btn.UseVisualStyleBackColor = true;
+            this.AvailableRooms_btn.Click += new System.EventHandler(this.availableRooms_btn_Click);
             // 
-            // ReservedRooms_Btn
+            // ReservedRooms_btn
             // 
-            this.ReservedRooms_Btn.Enabled = false;
-            this.ReservedRooms_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReservedRooms_Btn.Location = new System.Drawing.Point(283, 203);
-            this.ReservedRooms_Btn.Name = "ReservedRooms_Btn";
-            this.ReservedRooms_Btn.Size = new System.Drawing.Size(278, 53);
-            this.ReservedRooms_Btn.TabIndex = 2;
-            this.ReservedRooms_Btn.Text = "Забронированные номера";
-            this.ReservedRooms_Btn.UseVisualStyleBackColor = true;
-            this.ReservedRooms_Btn.Click += new System.EventHandler(this.reservedRooms_Btn_Click);
+            this.ReservedRooms_btn.Enabled = false;
+            this.ReservedRooms_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReservedRooms_btn.Location = new System.Drawing.Point(283, 203);
+            this.ReservedRooms_btn.Name = "ReservedRooms_btn";
+            this.ReservedRooms_btn.Size = new System.Drawing.Size(278, 53);
+            this.ReservedRooms_btn.TabIndex = 2;
+            this.ReservedRooms_btn.Text = "Забронированные номера";
+            this.ReservedRooms_btn.UseVisualStyleBackColor = true;
+            this.ReservedRooms_btn.Click += new System.EventHandler(this.reservedRooms_btn_Click);
             // 
             // BottomToolStripPanel
             // 
@@ -143,62 +142,51 @@ namespace Hotel_SA
             this.toolStripContainer1.TabIndex = 4;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
-            // Living_Btn
+            // Living_btn
             // 
-            this.Living_Btn.Enabled = false;
-            this.Living_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Living_Btn.Location = new System.Drawing.Point(283, 262);
-            this.Living_Btn.Name = "Living_Btn";
-            this.Living_Btn.Size = new System.Drawing.Size(278, 53);
-            this.Living_Btn.TabIndex = 5;
-            this.Living_Btn.Text = "Постояльцы";
-            this.Living_Btn.UseVisualStyleBackColor = true;
-            this.Living_Btn.Click += new System.EventHandler(this.Living_Btn_Click);
+            this.Living_btn.Enabled = false;
+            this.Living_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Living_btn.Location = new System.Drawing.Point(283, 262);
+            this.Living_btn.Name = "Living_btn";
+            this.Living_btn.Size = new System.Drawing.Size(278, 53);
+            this.Living_btn.TabIndex = 5;
+            this.Living_btn.Text = "Постояльцы";
+            this.Living_btn.UseVisualStyleBackColor = true;
+            this.Living_btn.Click += new System.EventHandler(this.Living_btn_Click);
             // 
-            // Exit_Btn
+            // Exit_btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit_Btn.Location = new System.Drawing.Point(648, 424);
-            this.Exit_Btn.Name = "Exit_Btn";
-            this.Exit_Btn.Size = new System.Drawing.Size(185, 38);
-            this.Exit_Btn.TabIndex = 15;
-            this.Exit_Btn.Text = "Выход";
-            this.Exit_Btn.UseVisualStyleBackColor = true;
-            this.Exit_Btn.Click += new System.EventHandler(this.Exit_Btn_Click);
+            this.Exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_btn.Location = new System.Drawing.Point(648, 424);
+            this.Exit_btn.Name = "Exit_btn";
+            this.Exit_btn.Size = new System.Drawing.Size(185, 38);
+            this.Exit_btn.TabIndex = 15;
+            this.Exit_btn.Text = "Выход";
+            this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
-            // PaidServices_Btn
+            // PaidServices_btn
             // 
-            this.PaidServices_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PaidServices_Btn.ForeColor = System.Drawing.Color.Red;
-            this.PaidServices_Btn.Location = new System.Drawing.Point(12, 424);
-            this.PaidServices_Btn.Name = "PaidServices_Btn";
-            this.PaidServices_Btn.Size = new System.Drawing.Size(206, 38);
-            this.PaidServices_Btn.TabIndex = 16;
-            this.PaidServices_Btn.Text = "Оказание услуг";
-            this.PaidServices_Btn.UseVisualStyleBackColor = true;
-            this.PaidServices_Btn.Click += new System.EventHandler(this.PaidServices_Btn_Click);
+            this.PaidServices_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PaidServices_btn.ForeColor = System.Drawing.Color.Red;
+            this.PaidServices_btn.Location = new System.Drawing.Point(12, 424);
+            this.PaidServices_btn.Name = "PaidServices_btn";
+            this.PaidServices_btn.Size = new System.Drawing.Size(206, 38);
+            this.PaidServices_btn.TabIndex = 16;
+            this.PaidServices_btn.Text = "Оказание услуг";
+            this.PaidServices_btn.UseVisualStyleBackColor = true;
+            this.PaidServices_btn.Click += new System.EventHandler(this.PaidServices_btn_Click);
             // 
-            // Archive_Btn
+            // Archive_btn
             // 
-            this.Archive_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Archive_Btn.Location = new System.Drawing.Point(436, 424);
-            this.Archive_Btn.Name = "Archive_Btn";
-            this.Archive_Btn.Size = new System.Drawing.Size(206, 38);
-            this.Archive_Btn.TabIndex = 17;
-            this.Archive_Btn.Text = "Архив";
-            this.Archive_Btn.UseVisualStyleBackColor = true;
-            this.Archive_Btn.Click += new System.EventHandler(this.Archive_Btn_Click);
-            // 
-            // checkOut_Btn
-            // 
-            this.checkOut_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkOut_Btn.Location = new System.Drawing.Point(224, 424);
-            this.checkOut_Btn.Name = "checkOut_Btn";
-            this.checkOut_Btn.Size = new System.Drawing.Size(206, 38);
-            this.checkOut_Btn.TabIndex = 18;
-            this.checkOut_Btn.Text = "Выселение";
-            this.checkOut_Btn.UseVisualStyleBackColor = true;
-            this.checkOut_Btn.Click += new System.EventHandler(this.checkOut_Btn_Click);
+            this.Archive_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Archive_btn.Location = new System.Drawing.Point(328, 424);
+            this.Archive_btn.Name = "Archive_btn";
+            this.Archive_btn.Size = new System.Drawing.Size(206, 38);
+            this.Archive_btn.TabIndex = 17;
+            this.Archive_btn.Text = "Архив";
+            this.Archive_btn.UseVisualStyleBackColor = true;
+            this.Archive_btn.Click += new System.EventHandler(this.Archive_btn_Click);
             // 
             // Main
             // 
@@ -206,14 +194,13 @@ namespace Hotel_SA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(845, 493);
-            this.Controls.Add(this.checkOut_Btn);
-            this.Controls.Add(this.Archive_Btn);
-            this.Controls.Add(this.PaidServices_Btn);
-            this.Controls.Add(this.Exit_Btn);
-            this.Controls.Add(this.Living_Btn);
+            this.Controls.Add(this.Archive_btn);
+            this.Controls.Add(this.PaidServices_btn);
+            this.Controls.Add(this.Exit_btn);
+            this.Controls.Add(this.Living_btn);
             this.Controls.Add(this.toolStripContainer1);
-            this.Controls.Add(this.ReservedRooms_Btn);
-            this.Controls.Add(this.AvailableRooms_Btn);
+            this.Controls.Add(this.ReservedRooms_btn);
+            this.Controls.Add(this.AvailableRooms_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
             this.Text = "ИС Гостиница (Матвеев, Рябиков)";
@@ -229,8 +216,8 @@ namespace Hotel_SA
         }
 
         #endregion
-        private System.Windows.Forms.Button AvailableRooms_Btn;
-        private System.Windows.Forms.Button ReservedRooms_Btn;
+        private System.Windows.Forms.Button AvailableRooms_btn;
+        private System.Windows.Forms.Button ReservedRooms_btn;
         private ToolStripPanel BottomToolStripPanel;
         private StatusStrip statusStrip;
         private ToolStripStatusLabel statusLabel;
@@ -239,10 +226,9 @@ namespace Hotel_SA
         private ToolStripPanel LeftToolStripPanel;
         private ToolStripContentPanel ContentPanel;
         private ToolStripContainer toolStripContainer1;
-        private Button Living_Btn;
-        private Button Exit_Btn;
-        private Button PaidServices_Btn;
-        private Button Archive_Btn;
-        private Button checkOut_Btn;
+        private Button Living_btn;
+        private Button Exit_btn;
+        private Button PaidServices_btn;
+        private Button Archive_btn;
     }
 }

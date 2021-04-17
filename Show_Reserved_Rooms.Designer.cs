@@ -35,11 +35,11 @@ namespace Hotel_SA
             this.colRoomNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colRoomCapacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colExpireAt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Exit_Btn = new System.Windows.Forms.Button();
-            this.CheckIn_Btn = new System.Windows.Forms.Button();
-            this.ReserveUpdate_Btn = new System.Windows.Forms.Button();
-            this.ReserveDelete_Btn = new System.Windows.Forms.Button();
-            this.Clear_Btn = new System.Windows.Forms.Button();
+            this.Exit_btn = new System.Windows.Forms.Button();
+            this.CheckIn_btn = new System.Windows.Forms.Button();
+            this.ReserveUpdate_btn = new System.Windows.Forms.Button();
+            this.ReserveDelete_btn = new System.Windows.Forms.Button();
+            this.Clear_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReserveRooms_List
@@ -81,74 +81,74 @@ namespace Hotel_SA
             this.colExpireAt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colExpireAt.Width = 273;
             // 
-            // Exit_Btn
+            // Exit_btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit_Btn.Location = new System.Drawing.Point(492, 312);
-            this.Exit_Btn.Name = "Exit_Btn";
-            this.Exit_Btn.Size = new System.Drawing.Size(211, 38);
-            this.Exit_Btn.TabIndex = 14;
-            this.Exit_Btn.Text = "Выход";
-            this.Exit_Btn.UseVisualStyleBackColor = true;
-            this.Exit_Btn.Click += new System.EventHandler(this.Exit_Btn_Click);
+            this.Exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_btn.Location = new System.Drawing.Point(492, 312);
+            this.Exit_btn.Name = "Exit_btn";
+            this.Exit_btn.Size = new System.Drawing.Size(211, 38);
+            this.Exit_btn.TabIndex = 14;
+            this.Exit_btn.Text = "Выход";
+            this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
-            // CheckIn_Btn
+            // CheckIn_btn
             // 
-            this.CheckIn_Btn.Enabled = false;
-            this.CheckIn_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckIn_Btn.Location = new System.Drawing.Point(492, 12);
-            this.CheckIn_Btn.Name = "CheckIn_Btn";
-            this.CheckIn_Btn.Size = new System.Drawing.Size(211, 38);
-            this.CheckIn_Btn.TabIndex = 15;
-            this.CheckIn_Btn.Text = "Заселение";
-            this.CheckIn_Btn.UseVisualStyleBackColor = true;
-            this.CheckIn_Btn.Click += new System.EventHandler(this.CheckIn_Btn_Click);
+            this.CheckIn_btn.Enabled = false;
+            this.CheckIn_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckIn_btn.Location = new System.Drawing.Point(492, 12);
+            this.CheckIn_btn.Name = "CheckIn_btn";
+            this.CheckIn_btn.Size = new System.Drawing.Size(211, 38);
+            this.CheckIn_btn.TabIndex = 15;
+            this.CheckIn_btn.Text = "Заселение";
+            this.CheckIn_btn.UseVisualStyleBackColor = true;
+            this.CheckIn_btn.Click += new System.EventHandler(this.CheckIn_btn_Click);
             // 
-            // ReserveUpdate_Btn
+            // ReserveUpdate_btn
             // 
-            this.ReserveUpdate_Btn.Enabled = false;
-            this.ReserveUpdate_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReserveUpdate_Btn.Location = new System.Drawing.Point(492, 100);
-            this.ReserveUpdate_Btn.Name = "ReserveUpdate_Btn";
-            this.ReserveUpdate_Btn.Size = new System.Drawing.Size(211, 38);
-            this.ReserveUpdate_Btn.TabIndex = 16;
-            this.ReserveUpdate_Btn.Text = "Продление на день";
-            this.ReserveUpdate_Btn.UseVisualStyleBackColor = true;
-            this.ReserveUpdate_Btn.Click += new System.EventHandler(this.ReserveUpdate_Btn_Click);
+            this.ReserveUpdate_btn.Enabled = false;
+            this.ReserveUpdate_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveUpdate_btn.Location = new System.Drawing.Point(492, 100);
+            this.ReserveUpdate_btn.Name = "ReserveUpdate_btn";
+            this.ReserveUpdate_btn.Size = new System.Drawing.Size(211, 38);
+            this.ReserveUpdate_btn.TabIndex = 16;
+            this.ReserveUpdate_btn.Text = "Продление на день";
+            this.ReserveUpdate_btn.UseVisualStyleBackColor = true;
+            this.ReserveUpdate_btn.Click += new System.EventHandler(this.ReserveUpdate_btn_Click);
             // 
-            // ReserveDelete_Btn
+            // ReserveDelete_btn
             // 
-            this.ReserveDelete_Btn.Enabled = false;
-            this.ReserveDelete_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReserveDelete_Btn.Location = new System.Drawing.Point(492, 56);
-            this.ReserveDelete_Btn.Name = "ReserveDelete_Btn";
-            this.ReserveDelete_Btn.Size = new System.Drawing.Size(211, 38);
-            this.ReserveDelete_Btn.TabIndex = 17;
-            this.ReserveDelete_Btn.Text = "Удаление брони";
-            this.ReserveDelete_Btn.UseVisualStyleBackColor = true;
-            this.ReserveDelete_Btn.Click += new System.EventHandler(this.ReserveDelete_Btn_Click);
+            this.ReserveDelete_btn.Enabled = false;
+            this.ReserveDelete_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReserveDelete_btn.Location = new System.Drawing.Point(492, 56);
+            this.ReserveDelete_btn.Name = "ReserveDelete_btn";
+            this.ReserveDelete_btn.Size = new System.Drawing.Size(211, 38);
+            this.ReserveDelete_btn.TabIndex = 17;
+            this.ReserveDelete_btn.Text = "Удаление брони";
+            this.ReserveDelete_btn.UseVisualStyleBackColor = true;
+            this.ReserveDelete_btn.Click += new System.EventHandler(this.ReserveDelete_btn_Click);
             // 
-            // Clear_Btn
+            // Clear_btn
             // 
-            this.Clear_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clear_Btn.Location = new System.Drawing.Point(492, 268);
-            this.Clear_Btn.Name = "Clear_Btn";
-            this.Clear_Btn.Size = new System.Drawing.Size(211, 38);
-            this.Clear_Btn.TabIndex = 18;
-            this.Clear_Btn.Text = "Очистить выбор";
-            this.Clear_Btn.UseVisualStyleBackColor = true;
-            this.Clear_Btn.Click += new System.EventHandler(this.Clear_Btn_Click);
+            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clear_btn.Location = new System.Drawing.Point(492, 268);
+            this.Clear_btn.Name = "Clear_btn";
+            this.Clear_btn.Size = new System.Drawing.Size(211, 38);
+            this.Clear_btn.TabIndex = 18;
+            this.Clear_btn.Text = "Очистить выбор";
+            this.Clear_btn.UseVisualStyleBackColor = true;
+            this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
             // 
             // Show_Reserved_Rooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 377);
-            this.Controls.Add(this.Clear_Btn);
-            this.Controls.Add(this.ReserveDelete_Btn);
-            this.Controls.Add(this.ReserveUpdate_Btn);
-            this.Controls.Add(this.CheckIn_Btn);
-            this.Controls.Add(this.Exit_Btn);
+            this.Controls.Add(this.Clear_btn);
+            this.Controls.Add(this.ReserveDelete_btn);
+            this.Controls.Add(this.ReserveUpdate_btn);
+            this.Controls.Add(this.CheckIn_btn);
+            this.Controls.Add(this.Exit_btn);
             this.Controls.Add(this.ReserveRooms_List);
             this.Name = "Show_Reserved_Rooms";
             this.Text = "Забронированные номера";
@@ -165,10 +165,10 @@ namespace Hotel_SA
         private System.Windows.Forms.ColumnHeader colRoomNumber;
         private System.Windows.Forms.ColumnHeader colRoomCapacity;
         private System.Windows.Forms.ColumnHeader colExpireAt;
-        private System.Windows.Forms.Button Exit_Btn;
-        private System.Windows.Forms.Button CheckIn_Btn;
-        private System.Windows.Forms.Button ReserveUpdate_Btn;
-        private System.Windows.Forms.Button ReserveDelete_Btn;
-        private System.Windows.Forms.Button Clear_Btn;
+        private System.Windows.Forms.Button Exit_btn;
+        private System.Windows.Forms.Button CheckIn_btn;
+        private System.Windows.Forms.Button ReserveUpdate_btn;
+        private System.Windows.Forms.Button ReserveDelete_btn;
+        private System.Windows.Forms.Button Clear_btn;
     }
 }

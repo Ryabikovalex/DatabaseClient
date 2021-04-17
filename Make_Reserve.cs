@@ -53,7 +53,7 @@ namespace Hotel_SA
             // Настройка RadioBox по умолчанию
             sexMale_radio.Checked = true;
 
-            Reserve_Btn.Enabled = false;
+            Reserve_btn.Enabled = false;
         }
 
         private void Reservation_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,7 +62,7 @@ namespace Hotel_SA
             ParentF.Show();
         }
 
-        private void Exit_Btn_Click(object sender, EventArgs e)
+        private void Exit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
             ParentF.enableElements();
@@ -94,14 +94,14 @@ namespace Hotel_SA
             {
                 Name_textbox.ForeColor = Color.Green;
                 if (Number_textbox.ForeColor == Color.Green)
-                    Reserve_Btn.Enabled = true;
+                    Reserve_btn.Enabled = true;
                 else
-                    Reserve_Btn.Enabled = false;
+                    Reserve_btn.Enabled = false;
             }
             else
             {
                 Name_textbox.ForeColor = Color.Black;
-                Reserve_Btn.Enabled = false;
+                Reserve_btn.Enabled = false;
             }
         }
 
@@ -116,18 +116,18 @@ namespace Hotel_SA
                 {
                     Number_textbox.ForeColor = Color.Green;
                     if (Name_textbox.ForeColor == Color.Green)
-                        Reserve_Btn.Enabled = true;
+                        Reserve_btn.Enabled = true;
                 }
                 else
                 {
                     Number_textbox.ForeColor = Color.Red;
-                    Reserve_Btn.Enabled = false;
+                    Reserve_btn.Enabled = false;
                 }
             }
             else
             {
                 Number_textbox.ForeColor = Color.Black;
-                Reserve_Btn.Enabled = false;
+                Reserve_btn.Enabled = false;
             }
         }
 
@@ -138,7 +138,7 @@ namespace Hotel_SA
             clientType_checkbox.Checked = false;
         }
 
-        private void Reserve_Btn_Click(object sender, EventArgs e)
+        private void Reserve_btn_Click(object sender, EventArgs e)
         {
             disableElements();
             Match m = Regex.Match(Number_textbox.Text, Resources.RegExTelePhone);
@@ -210,7 +210,7 @@ namespace Hotel_SA
                 sexMale_radio.Enabled = true;
                 sexFemale_radio.Enabled = true;
             }
-            Reserve_Btn.Enabled = false;
+            Reserve_btn.Enabled = false;
         }
         public override void disableElements()
         {
@@ -219,7 +219,7 @@ namespace Hotel_SA
             sexMale_radio.Enabled = false;
             sexFemale_radio.Enabled = false;
             clientType_checkbox.Enabled = false;
-            Reserve_Btn.Enabled = false;
+            Reserve_btn.Enabled = false;
         }
     }
 }

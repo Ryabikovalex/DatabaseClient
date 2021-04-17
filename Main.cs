@@ -11,31 +11,33 @@ namespace Hotel_SA
         {
             InitializeComponent();
 
-            Living_Btn.Enabled = false;
-            Archive_Btn.Enabled = false;
-            checkOut_Btn.Enabled = false;
+            Archive_btn.Enabled = false;
         }
 
-        private void availableRooms_Btn_Click(object sender, EventArgs e)
+        private void availableRooms_btn_Click(object sender, EventArgs e)
         {
             this.disableElements();
+            Cursor.Current = Cursors.WaitCursor;
             Show_Available_Rooms subForm = new Show_Available_Rooms(this);
             subForm.Show();
+            Cursor.Current = Cursors.Default;
         }
 
         public override void disableElements()
         {
-            AvailableRooms_Btn.Enabled = false;
-            ReservedRooms_Btn.Enabled = false;
-            PaidServices_Btn.Enabled = false;
+            AvailableRooms_btn.Enabled = false;
+            ReservedRooms_btn.Enabled = false;
+            PaidServices_btn.Enabled = false;
+            Living_btn.Enabled = false;
 
         }
         public override void enableElements()
         {
-            AvailableRooms_Btn.Enabled = true;
-            ReservedRooms_Btn.Enabled = true;
-            PaidServices_Btn.Enabled = true;
-            AvailableRooms_Btn.Select();
+            AvailableRooms_btn.Enabled = true;
+            ReservedRooms_btn.Enabled = true;
+            PaidServices_btn.Enabled = true;
+            Living_btn.Enabled = true;
+            AvailableRooms_btn.Select();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -67,37 +69,39 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Exit_Btn_Click(object sender, EventArgs e)
+        private void Exit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void reservedRooms_Btn_Click(object sender, EventArgs e)
+        private void reservedRooms_btn_Click(object sender, EventArgs e)
         {
             this.disableElements();
+            Cursor.Current = Cursors.WaitCursor;
             Show_Reserved_Rooms subForm = new Show_Reserved_Rooms(this);
             subForm.Show();
         }
 
-        private void PaidServices_Btn_Click(object sender, EventArgs e)
+        private void PaidServices_btn_Click(object sender, EventArgs e)
         {
             this.disableElements();
+            Cursor.Current = Cursors.WaitCursor;
             Charge_Service subForm = new Charge_Service(this);
             subForm.Show();
+            Cursor.Current = Cursors.Default;
         }
 
-        private void checkOut_Btn_Click(object sender, EventArgs e)
+        private void Archive_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Archive_Btn_Click(object sender, EventArgs e)
+        private void Living_btn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Living_Btn_Click(object sender, EventArgs e)
-        {
-
+            this.disableElements();
+            Cursor.Current = Cursors.WaitCursor;
+            Show_Living subForm = new Show_Living(this);
+            subForm.Show();
+            Cursor.Current = Cursors.Default;
         }
     }
 }

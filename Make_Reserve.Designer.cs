@@ -41,9 +41,9 @@
             this.sexMale_radio = new System.Windows.Forms.RadioButton();
             this.sexFemale_radio = new System.Windows.Forms.RadioButton();
             this.sexPanel = new System.Windows.Forms.Panel();
-            this.Exit_Btn = new System.Windows.Forms.Button();
+            this.Exit_btn = new System.Windows.Forms.Button();
             this.Clear_btn = new System.Windows.Forms.Button();
-            this.Reserve_Btn = new System.Windows.Forms.Button();
+            this.Reserve_btn = new System.Windows.Forms.Button();
             this.sexPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,16 +164,16 @@
             this.sexPanel.Size = new System.Drawing.Size(203, 34);
             this.sexPanel.TabIndex = 21;
             // 
-            // Exit_Btn
+            // Exit_btn
             // 
-            this.Exit_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit_Btn.Location = new System.Drawing.Point(612, 196);
-            this.Exit_Btn.Name = "Exit_Btn";
-            this.Exit_Btn.Size = new System.Drawing.Size(176, 38);
-            this.Exit_Btn.TabIndex = 21;
-            this.Exit_Btn.Text = "Отмена";
-            this.Exit_Btn.UseVisualStyleBackColor = true;
-            this.Exit_Btn.Click += new System.EventHandler(this.Exit_Btn_Click);
+            this.Exit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_btn.Location = new System.Drawing.Point(612, 196);
+            this.Exit_btn.Name = "Exit_btn";
+            this.Exit_btn.Size = new System.Drawing.Size(176, 38);
+            this.Exit_btn.TabIndex = 21;
+            this.Exit_btn.Text = "Отмена";
+            this.Exit_btn.UseVisualStyleBackColor = true;
+            this.Exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // Clear_btn
             // 
@@ -186,25 +186,25 @@
             this.Clear_btn.UseVisualStyleBackColor = true;
             this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
             // 
-            // Reserve_Btn
+            // Reserve_btn
             // 
-            this.Reserve_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Reserve_Btn.Location = new System.Drawing.Point(612, 15);
-            this.Reserve_Btn.Name = "Reserve_Btn";
-            this.Reserve_Btn.Size = new System.Drawing.Size(176, 38);
-            this.Reserve_Btn.TabIndex = 23;
-            this.Reserve_Btn.Text = "Бронь";
-            this.Reserve_Btn.UseVisualStyleBackColor = true;
-            this.Reserve_Btn.Click += new System.EventHandler(this.Reserve_Btn_Click);
+            this.Reserve_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Reserve_btn.Location = new System.Drawing.Point(612, 15);
+            this.Reserve_btn.Name = "Reserve_btn";
+            this.Reserve_btn.Size = new System.Drawing.Size(176, 38);
+            this.Reserve_btn.TabIndex = 23;
+            this.Reserve_btn.Text = "Бронь";
+            this.Reserve_btn.UseVisualStyleBackColor = true;
+            this.Reserve_btn.Click += new System.EventHandler(this.Reserve_btn_Click);
             // 
             // Make_Reserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 246);
-            this.Controls.Add(this.Reserve_Btn);
+            this.Controls.Add(this.Reserve_btn);
             this.Controls.Add(this.Clear_btn);
-            this.Controls.Add(this.Exit_Btn);
+            this.Controls.Add(this.Exit_btn);
             this.Controls.Add(this.sexPanel);
             this.Controls.Add(this.clientType_checkbox);
             this.Controls.Add(this.Number_textbox);
@@ -237,8 +237,8 @@
         private System.Windows.Forms.RadioButton sexMale_radio;
         private System.Windows.Forms.RadioButton sexFemale_radio;
         private System.Windows.Forms.Panel sexPanel;
-        private System.Windows.Forms.Button Exit_Btn;
+        private System.Windows.Forms.Button Exit_btn;
         private System.Windows.Forms.Button Clear_btn;
-        private System.Windows.Forms.Button Reserve_Btn;
+        private System.Windows.Forms.Button Reserve_btn;
     }
 }
