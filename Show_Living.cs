@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Hotel_SA
 {
-    public partial class Show_Living : ProjectForm
+    public partial class ShowLiving : ProjectForm
     {
-        public struct LivingInfo_struct
+        public struct LivingInfoStruct
         {
             public int Id { get; set; }
             public int ClientId { get; set; }
@@ -22,7 +22,7 @@ namespace Hotel_SA
             public string ClientName { get; set; }
             public bool ClientSex { get;  set; }
 
-            public string getClientSex {
+            public string GetClientSex {
                 get{
                     if (this.ClientSex) return @"Ж";
                     else return @"М";
@@ -31,7 +31,7 @@ namespace Hotel_SA
             public string ClientNumber { get; set; }
             public int RoomId { get; set; }
             public string RoomNumber { get; set; }
-            public string getRoomNumber
+            public string GetRoomNumber
             {
                 get
                 {
@@ -41,7 +41,7 @@ namespace Hotel_SA
             public DateTime DateIn { get; set; }
 
         }
-        public Show_Living(ProjectForm f)
+        public ShowLiving(ProjectForm f)
         {
             InitializeComponent();
 
@@ -56,9 +56,9 @@ namespace Hotel_SA
             Cursor.Current = Cursors.WaitCursor;
             Living_List.Items.Clear();
 
-            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
-                List<LivingInfo_struct> roomList = db.Living.Select(p => new LivingInfo_struct
+                List<LivingInfoStruct> roomList = db.Living.Select(p => new LivingInfoStruct
                 {
                     Id = p.Id,
                     ClientId = p.ClientId,
@@ -73,14 +73,14 @@ namespace Hotel_SA
 
                 string temp = roomList[0].RoomNumber;
                 ListViewGroup group;
-                group = new ListViewGroup(roomList[0].getRoomNumber, HorizontalAlignment.Left);
+                group = new ListViewGroup(roomList[0].GetRoomNumber, HorizontalAlignment.Left);
                 group.Name = roomList[0].RoomNumber;
                 Living_List.Groups.Add(group);
                 foreach (var room in roomList)
                 {
                     if (!temp.Equals(room.RoomNumber))
                     {
-                        group = new ListViewGroup(room.getRoomNumber, HorizontalAlignment.Left);
+                        group = new ListViewGroup(room.GetRoomNumber, HorizontalAlignment.Left);
                         group.Name = room.RoomNumber;
                         Living_List.Groups.Add(group);
                         temp = room.RoomNumber;
@@ -88,7 +88,7 @@ namespace Hotel_SA
                     // Создание элемента списка на экране
                     ListViewItem lvi = new ListViewItem(new[] {
                         room.ClientName.ToString().ToUpper(),
-                        room.getClientSex,
+                        room.GetClientSex,
                         room.ClientNumber.ToString(),
                         room.DateIn.ToShortDateString()
                     });

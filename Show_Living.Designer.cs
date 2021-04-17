@@ -1,6 +1,6 @@
 ﻿namespace Hotel_SA
 {
-    partial class Show_Living
+    partial class ShowLiving
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.Controls.Add(this.Exit_btn);
             this.Controls.Add(this.Clear_btn);
             this.Controls.Add(this.checkOut_btn);
-            this.Name = "Show_Living";
+            this.Name = "ShowLiving";
             this.Text = "Постояльцы";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_FormClosing);
             this.ResumeLayout(false);
