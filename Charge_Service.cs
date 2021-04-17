@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Hotel_SA
 {
-    public partial class Charge_Service : ProjectForm
+    public partial class ChargeService : ProjectForm
     {
-        private struct Service_struct
+        private struct ServiceStruct
         {
             public int Id { get; set; }
             public string Name { get; set; }
@@ -40,17 +40,17 @@ namespace Hotel_SA
 
         }
 
-        private List<Service_struct> paidServiceList;
+        private List<ServiceStruct> _paidServiceList;
 
-        public Charge_Service(ProjectForm p)
+        public ChargeService(ProjectForm p)
         {
             InitializeComponent();
 
             ParentF = p;
 
-            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
-                paidServiceList = db.PaidServices.OrderBy(p => p.Name).Select(p => new Service_struct()
+                _paidServiceList = db.PaidServices.OrderBy(p => p.Name).Select(p => new ServiceStruct()
                 {
                     Id = p.Id,
                     Name = p.Name,
@@ -62,7 +62,7 @@ namespace Hotel_SA
                 RoomNumber_combobox.DisplayMember = "RoomNumber";
 
 
-                PaidServices_list.DataSource = paidServiceList;
+                PaidServices_list.DataSource = _paidServiceList;
                 PaidServices_list.DisplayMember = "DisplayValue";
                 PaidServices_list.ValueMember = "Id";
             }
@@ -75,11 +75,11 @@ namespace Hotel_SA
         {
             if(PaidServices_list.SelectedItems.Count > 0)
             {
-                Service_struct S = paidServiceList[PaidServices_list.SelectedIndex];
-                S.Count = Decimal.ToInt32(Count_numeric.Value);
+                ServiceStruct s = _paidServiceList[PaidServices_list.SelectedIndex];
+                s.Count = Decimal.ToInt32(Count_numeric.Value);
 
-                Service_list.Items.Add(S);
-                SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) + S.Count * S.Cost).ToString();
+                Service_list.Items.Add(s);
+                SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) + s.Count * s.Cost).ToString();
 
                 Count_numeric.Value = 1;
                 Charge_btn.Enabled = true;
@@ -90,10 +90,10 @@ namespace Hotel_SA
         {
             if (Service_list.SelectedItems.Count > 0)
             {
-                Service_struct S = (Service_struct)Service_list.SelectedItem;
+                ServiceStruct s = (ServiceStruct)Service_list.SelectedItem;
 
                 Service_list.Items.RemoveAt(Service_list.SelectedIndex);
-                SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) - S.Count * S.Cost).ToString();
+                SumValue_lbl.Text = (Int32.Parse(SumValue_lbl.Text) - s.Count * s.Cost).ToString();
                 if (Service_list.Items.Count == 0) Charge_btn.Enabled = false;
             }
         }
@@ -111,10 +111,10 @@ namespace Hotel_SA
         private void Charge_btn_Click(object sender, EventArgs e)
         {
             Charge_btn.Enabled = false;
-            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
                 List<ServiceList> list = new List<ServiceList>();
-                foreach (Service_struct item in Service_list.Items)
+                foreach (ServiceStruct item in Service_list.Items)
                 {
                     list.Add(new ServiceList
                     {

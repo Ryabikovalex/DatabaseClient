@@ -18,7 +18,7 @@ namespace Hotel_SA
         {
             this.disableElements();
             Cursor.Current = Cursors.WaitCursor;
-            Show_Available_Rooms subForm = new Show_Available_Rooms(this);
+            ShowAvailableRooms subForm = new ShowAvailableRooms(this);
             subForm.Show();
             Cursor.Current = Cursors.Default;
         }
@@ -44,7 +44,7 @@ namespace Hotel_SA
         {
             try
             {
-                using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+                using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
                 {
                     if (db.Database.CanConnect())
                     {
@@ -77,7 +77,7 @@ namespace Hotel_SA
         {
             this.disableElements();
             Cursor.Current = Cursors.WaitCursor;
-            Show_Reserved_Rooms subForm = new Show_Reserved_Rooms(this);
+            ShowReservedRooms subForm = new ShowReservedRooms(this);
             subForm.Show();
         }
 
@@ -85,7 +85,7 @@ namespace Hotel_SA
         {
             this.disableElements();
             Cursor.Current = Cursors.WaitCursor;
-            Charge_Service subForm = new Charge_Service(this);
+            ChargeService subForm = new ChargeService(this);
             subForm.Show();
             Cursor.Current = Cursors.Default;
         }
@@ -99,7 +99,7 @@ namespace Hotel_SA
         {
             this.disableElements();
             Cursor.Current = Cursors.WaitCursor;
-            Show_Living subForm = new Show_Living(this);
+            ShowLiving subForm = new ShowLiving(this);
             subForm.Show();
             Cursor.Current = Cursors.Default;
         }

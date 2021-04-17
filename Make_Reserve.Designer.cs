@@ -1,6 +1,6 @@
 ﻿namespace Hotel_SA
 {
-    partial class Make_Reserve
+    partial class MakeReserve
     {
         /// <summary>
         /// Required designer variable.
@@ -212,7 +212,7 @@
             this.Controls.Add(this.Name_textbox);
             this.Controls.Add(this.Name_Label);
             this.Controls.Add(this.ReserveRooms_List);
-            this.Name = "Make_Reserve";
+            this.Name = "MakeReserve";
             this.Text = "Создание брони";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_FormClosing);
             this.sexPanel.ResumeLayout(false);

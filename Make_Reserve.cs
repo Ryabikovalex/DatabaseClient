@@ -15,26 +15,26 @@ using System.Windows.Forms;
 
 namespace Hotel_SA
 {
-    public partial class Make_Reserve : ProjectForm
+    public partial class MakeReserve : ProjectForm
     {
-        private List<DbModels.AvialableRooms> Rooms;
+        private List<DbModels.AvialableRooms> _rooms;
 
         /// <summary>
         /// Конструктор формы Создания брони
         /// </summary>
         /// <param name="parent">Форма Поиска свободных номеров</param>
         /// <param name="list">Список номеров выбранных для бронирования</param>
-        public Make_Reserve(ProjectForm parent, List<DbModels.AvialableRooms> list)
+        public MakeReserve(ProjectForm parent, List<DbModels.AvialableRooms> list)
         {
             InitializeComponent();
 
             ParentF = parent;
             ParentF.Hide();
             this.Show();
-            Rooms = list;
+            _rooms = list;
 
             // Заполнение списков
-            foreach (DbModels.AvialableRooms room in Rooms)
+            foreach (DbModels.AvialableRooms room in _rooms)
             {
                 ListViewItem lvi = new ListViewItem(new[] {
                         room.Number.ToString(),
@@ -152,7 +152,7 @@ namespace Hotel_SA
             // Доделать проверку на наличие клиента до этого
             // Если его нет то добавить
             // Если есть то сделать резервацию новую
-            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
                 DbModels.Client client = db.Client.Where(p => p.Telephone == number || p.Fio == name).FirstOrDefault();
                 if (client != null)
@@ -184,7 +184,7 @@ namespace Hotel_SA
 
         private void proceedReserve(Client client)
         {
-            using (u0996168_MAI_DB_LBContext db = new u0996168_MAI_DB_LBContext())
+            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
                 foreach (ListViewItem item in ReserveRooms_List.Items)
                 {

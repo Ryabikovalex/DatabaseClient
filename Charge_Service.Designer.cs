@@ -1,6 +1,6 @@
 ﻿namespace Hotel_SA
 {
-    partial class Charge_Service
+    partial class ChargeService
     {
         /// <summary>
         /// Required designer variable.
@@ -227,7 +227,7 @@
             this.Controls.Add(this.Service_list);
             this.Controls.Add(this.PaidServices_list);
             this.Controls.Add(this.RoomNumber_lbl);
-            this.Name = "Charge_Service";
+            this.Name = "ChargeService";
             this.Text = "Оказание услуг";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Event_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.Count_numeric)).EndInit();
