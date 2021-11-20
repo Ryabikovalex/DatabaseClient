@@ -44,7 +44,7 @@ namespace DatabaseClient
         {
             try
             {
-                using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+                using (MaiDbLbContext db = new MaiDbLbContext())
                 {
                     if (db.Database.CanConnect())
                     {

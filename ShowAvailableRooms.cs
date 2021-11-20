@@ -31,7 +31,7 @@ namespace DatabaseClient
         {   // TODO Переписать форму, учитывая что некоторые комнаты можно заселять не сегодня!
             InitializeComponent();
             ParentF = f;
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 // Выборка типов номера
                 _types = db.RoomTypes.Select(p => new RoomTypeStruct()
@@ -84,7 +84,7 @@ namespace DatabaseClient
             FreeRooms_List.Items.Clear();
 
             // Подключение к БД
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 // Выборка комнат по их типу
                 List<DbModels.AvialableRooms> rooms = db.AvialableRooms

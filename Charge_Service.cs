@@ -48,7 +48,7 @@ namespace DatabaseClient
 
             ParentF = p;
 
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 _paidServiceList = db.PaidServices.OrderBy(p => p.Name).Select(p => new ServiceStruct()
                 {
@@ -111,7 +111,7 @@ namespace DatabaseClient
         private void Charge_btn_Click(object sender, EventArgs e)
         {
             Charge_btn.Enabled = false;
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 List<ServiceList> list = new List<ServiceList>();
                 foreach (ServiceStruct item in Service_list.Items)

@@ -56,7 +56,7 @@ namespace DatabaseClient
             Cursor.Current = Cursors.WaitCursor;
             Living_List.Items.Clear();
 
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 List<LivingInfoStruct> roomList = db.Living.Select(p => new LivingInfoStruct
                 {

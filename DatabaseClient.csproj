@@ -58,7 +58,7 @@
         <Compile Include="DbModels\Rooms.cs" />
         <Compile Include="DbModels\RoomTypes.cs" />
         <Compile Include="DbModels\ServiceList.cs" />
-        <Compile Include="DbModels\u0996168_MAI_DB_LBContext.cs" />
+        <Compile Include="DbModels\MaiDbLbContext.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="Main.Designer.cs" />
         <Compile Include="Make_Reserve.cs" />
@@ -90,6 +90,7 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Properties\Settings.settings" />
+      <Content Include="UpdateDbModels.txt" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="BouncyCastle" Version="1.8.3.1" />

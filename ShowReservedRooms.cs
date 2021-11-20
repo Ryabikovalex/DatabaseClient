@@ -46,7 +46,7 @@ namespace DatabaseClient
             disableElements();
             ReserveRooms_List.Items.Clear();
 
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 List<ReservedRoomsStruct> roomList = db.Reservation.Select(p => new ReservedRoomsStruct()
                 {
@@ -135,7 +135,7 @@ namespace DatabaseClient
                             MessageBoxOptions.DefaultDesktopOnly
                         ) == DialogResult.Yes)
             {
-                using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+                using (MaiDbLbContext db = new MaiDbLbContext())
                 {
                     List<int> ids = new List<int>();
                     foreach (ListViewItem item in ReserveRooms_List.SelectedItems)
@@ -157,7 +157,7 @@ namespace DatabaseClient
         /// <param name="e"></param>
         private void ReserveUpdate_btn_Click(object sender, EventArgs e)
         {
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 List<int> ids = new List<int>();
                 foreach (ListViewItem item in ReserveRooms_List.SelectedItems)

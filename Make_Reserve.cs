@@ -152,7 +152,7 @@ namespace DatabaseClient
             // Доделать проверку на наличие клиента до этого
             // Если его нет то добавить
             // Если есть то сделать резервацию новую
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 Client client = db.Client.Where(p => p.Telephone == number || p.Fio == name).FirstOrDefault();
                 if (client != null)
@@ -191,7 +191,7 @@ namespace DatabaseClient
 
         private void proceedReserve(Client client)
         {
-            using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
+            using (MaiDbLbContext db = new MaiDbLbContext())
             {
                 foreach (ListViewItem item in ReserveRooms_List.Items)
                 {
