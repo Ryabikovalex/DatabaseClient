@@ -11,13 +11,13 @@ using Microsoft.Extensions.Logging.Console;
 
 namespace DatabaseClient.DbModels
 {
-    public partial class U0996168MaiDbLbContext : DbContext
+    public partial class MaiDbLbContext : DbContext
     {
-        public U0996168MaiDbLbContext()
+        public MaiDbLbContext()
         {
         }
 
-        public U0996168MaiDbLbContext(DbContextOptions<U0996168MaiDbLbContext> options)
+        public MaiDbLbContext(DbContextOptions<MaiDbLbContext> options)
             : base(options)
         {
         }

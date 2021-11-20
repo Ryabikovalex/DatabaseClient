@@ -351,3 +351,5 @@ MigrationBackup/
 *.txt
 /Properties/Settings.Designer.cs
 /Properties/Settings.settings
+
+.idea/
