@@ -1,9 +1,9 @@
-﻿using Hotel_SA.DbModels;
+﻿using DatabaseClient.DbModels;
 using System;
 using System.Windows.Forms;
 
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     public partial class Main : ProjectForm
     {

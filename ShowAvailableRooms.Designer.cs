@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     partial class ShowAvailableRooms
     {

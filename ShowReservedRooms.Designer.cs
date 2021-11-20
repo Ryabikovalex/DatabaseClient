@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     partial class ShowReservedRooms
     {

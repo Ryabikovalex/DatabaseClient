@@ -1,5 +1,5 @@
-﻿using Hotel_SA.DbModels;
-using Hotel_SA.Properties;
+﻿using DatabaseClient.DbModels;
+using DatabaseClient.Properties;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     public partial class MakeReserve : ProjectForm
     {
@@ -154,10 +154,12 @@ namespace Hotel_SA
             // Если есть то сделать резервацию новую
             using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
             {
-                DbModels.Client client = db.Client.Where(p => p.Telephone == number || p.Fio == name).FirstOrDefault();
+                Client client = db.Client.Where(p => p.Telephone == number || p.Fio == name).FirstOrDefault();
                 if (client != null)
                 {
-                    if ((client.Fio != name && MessageBox.Show(@"Найден клиент " + "\"" + client.Fio + "\" с указанным телефоном\n"
+                    if (client.Fio != name
+                         && client.Telephone == number
+                        && MessageBox.Show(@"Найден клиент " + "\"" + client.Fio + "\" с указанным телефоном\n"
                             +@"Yes - чтобы продолжить как " + "\"" + client.Fio + "\""
                             ,
                             @"Ошибка ввода данных",
@@ -165,8 +167,13 @@ namespace Hotel_SA
                             MessageBoxIcon.Warning,
                             MessageBoxDefaultButton.Button2,
                             MessageBoxOptions.DefaultDesktopOnly
-                        ) == DialogResult.Yes) || client.Fio == name)
+                        ) == DialogResult.Yes)
                     {
+                        this.proceedReserve(client);
+                    }else if (client.Fio == name && client.Telephone != number)
+                    {
+                        client.Telephone = number;
+                        db.SaveChanges();
                         this.proceedReserve(client);
                     }
                 }

@@ -1,9 +1,8 @@
 ﻿using System.Windows.Forms;
-using Hotel_SA;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
-    partial class Main : Hotel_SA.ProjectForm
+    partial class Main : DatabaseClient.ProjectForm
     {
         /// <summary>
         /// Required designer variable.

@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text;
 using System.Text.RegularExpressions;
-using Microsoft.EntityFrameworkCore;
 
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     static class Program
     {

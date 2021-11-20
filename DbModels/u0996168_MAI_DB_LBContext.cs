@@ -3,20 +3,21 @@ using Microsoft.EntityFrameworkCore;
 using MySQL.Data.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace Hotel_SA.DbModels
+namespace DatabaseClient.DbModels
 {
-    public partial class u0996168_MAI_DB_LBContext : DbContext
+    public partial class U0996168MaiDbLbContext : DbContext
     {
-        public u0996168_MAI_DB_LBContext()
+        public U0996168MaiDbLbContext()
         {
         }
 
-        public u0996168_MAI_DB_LBContext(DbContextOptions<u0996168_MAI_DB_LBContext> options)
+        public U0996168MaiDbLbContext(DbContextOptions<U0996168MaiDbLbContext> options)
             : base(options)
         {
         }
@@ -37,11 +38,11 @@ namespace Hotel_SA.DbModels
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseMySQL(Properties.Settings.Default.MySQL_conn);
-#warning Enabled Logging SQL
+                #warning Enabled Logging SQL
                 optionsBuilder.EnableSensitiveDataLogging();
-                ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => {; });
-                ConsoleLoggerExtensions.AddConsole(MyLoggerFactory);
-                optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+                ILoggerFactory myLoggerFactory = LoggerFactory.Create(builder => {; });
+                //ConsoleLoggerExtensions.AddConsole(myLoggerFactory);
+                optionsBuilder.UseLoggerFactory(myLoggerFactory);
             }
         }
 

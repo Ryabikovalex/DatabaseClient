@@ -1,4 +1,4 @@
-﻿using Hotel_SA.DbModels;
+﻿using DatabaseClient.DbModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     public partial class ShowLiving : ProjectForm
     {

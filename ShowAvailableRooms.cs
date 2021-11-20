@@ -1,4 +1,4 @@
-﻿using Hotel_SA.DbModels;
+﻿using DatabaseClient.DbModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
 
     public partial class ShowAvailableRooms : ProjectForm
@@ -28,7 +28,7 @@ namespace Hotel_SA
         /// </summary>
         /// <param name="f">Форма главная</param>
         public ShowAvailableRooms(ProjectForm f)
-        {
+        {   // TODO Переписать форму, учитывая что некоторые комнаты можно заселять не сегодня!
             InitializeComponent();
             ParentF = f;
             using (U0996168MaiDbLbContext db = new U0996168MaiDbLbContext())
@@ -49,11 +49,11 @@ namespace Hotel_SA
 
                 // Правка дат выселения / заселения
                 dateTimeCheckIn.Enabled = false;
-                //dateTimeCheckIn.MinDate = DateTime.Today;
-                dateTimeCheckOut.MinDate = DateTime.Today;
+                dateTimeCheckIn.MinDate = DateTime.Today;
+                dateTimeCheckOut.MinDate = DateTime.Today.AddDays(1);
                 dateTimeCheckIn.Value = DateTime.Today;
-                dateTimeCheckOut.Value = DateTime.Today.AddDays(1);
-                //dateTimeCheckIn.MaxDate = DateTime.Today.AddMonths(6);
+                dateTimeCheckOut.Value = dateTimeCheckOut.MinDate;
+                dateTimeCheckIn.MaxDate = DateTime.Today;
                 dateTimeCheckOut.MaxDate = DateTime.Today.AddMonths(18);
 
                 // Отключение кнопок по умолчанию
@@ -155,7 +155,7 @@ namespace Hotel_SA
                 newList.Add((DbModels.AvialableRooms)(element.Tag));
             }
             // Создание формы Бронь
-            Hotel_SA.MakeReserve subForm = new MakeReserve(this, newList);
+            DatabaseClient.MakeReserve subForm = new MakeReserve(this, newList);
             subForm.Show();
             this.Hide();
             this.disableElements();

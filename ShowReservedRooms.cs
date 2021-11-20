@@ -1,4 +1,4 @@
-﻿using Hotel_SA.DbModels;
+﻿using DatabaseClient.DbModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_SA
+namespace DatabaseClient
 {
     public partial class ShowReservedRooms : ProjectForm
     {

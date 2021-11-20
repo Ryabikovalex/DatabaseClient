@@ -1,4 +1,4 @@
-﻿namespace Hotel_SA
+﻿namespace DatabaseClient
 {
     partial class ShowLiving
     {
