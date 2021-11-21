@@ -91,6 +91,7 @@ namespace DatabaseClient.DbModels
                     .HasDefaultValueSql("'1'")
                     .HasComment("Вместимость");
 
+                //TODO: Text about room state 
                 entity.Property(e => e.CheckIn)
                     .IsRequired()
                     .HasMaxLength(11)
@@ -325,7 +326,7 @@ namespace DatabaseClient.DbModels
                 entity.HasIndex(e => e.Type)
                     .HasName("Класс номера");
 
-                entity.Property(e => e.Id).HasColumnType("int(11) unsigned");
+                entity.Property(e => e.Id).HasColumnType("int(10) unsigned");
 
                 entity.Property(e => e.Busy)
                     .IsRequired()
@@ -384,7 +385,7 @@ namespace DatabaseClient.DbModels
 
                 entity.Property(e => e.Count)
                     .HasColumnType("int(10) unsigned")
-                    .HasComment("Кол-во ");
+                    .HasComment("Кол-во");
 
                 entity.Property(e => e.Date)
                     .HasColumnType("date")
