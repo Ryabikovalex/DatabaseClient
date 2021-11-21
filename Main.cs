@@ -1,5 +1,6 @@
 ﻿using DatabaseClient.DbModels;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -77,8 +78,24 @@ namespace DatabaseClient
         {
             this.disableElements();
             Cursor.Current = Cursors.WaitCursor;
-            ShowReservedRooms subForm = new ShowReservedRooms(this);
-            subForm.Show();
+            using (MaiDbLbContext db = new MaiDbLbContext())
+            {
+                if (db.Reservation.Count() > 0)
+                {
+                    ShowReservedRooms subForm = new ShowReservedRooms(this);
+                    subForm.Show();
+                }
+                else
+                {
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("На данный момент нет брони.",
+                        @"Внимание",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    this.enableElements();
+                }
+            }
         }
 
         private void PaidServices_btn_Click(object sender, EventArgs e)
